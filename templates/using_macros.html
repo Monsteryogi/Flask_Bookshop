@@ -1,0 +1,13 @@
+{% import 'macro.html' as my_macros %}
+
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <title>Using macros</title>
+    </head>
+
+    <body>
+        <h3>This collection belongs to {{name}}</h3>
+        {{ my_macros.render_dict(movies) }}
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <title>Movie Duration</title>
+    </head>
+
+    <body>
+        <h3>This collection belongs to {{name}}</h3>
+
+        <table>
+            <tr>
+                <th>Movie</th>
+                <th>Duration</th>
+                <th>Comments</th>
+            </tr>
+
+            {% for movie, duration in movies.items() %}
+
+                <tr>
+                    <td>{{ movie }}</td>
+                    <td>{{ duration }}</td>
+                    
+                    {% if duration > 3 %}
+                        <td>Long</td>
+                    {% elif duration > 2 %}
+                        <td>Medium</td>
+                    {% else %}
+                        <td>Short</td>
+                    {% endif %}
+                </tr>
+
+            {% endfor %}
+        </table>
+    </body>
+</html>
